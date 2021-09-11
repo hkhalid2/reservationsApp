@@ -1,7 +1,7 @@
 const router = require('express').Router();
 //import models
 //import authentication fucntion
-
+const withAuth = require('reviews/utils/auth.js')
 
 
 
