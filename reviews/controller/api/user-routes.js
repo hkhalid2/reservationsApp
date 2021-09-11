@@ -1,14 +1,66 @@
 const router = require('express').Router();
-//import modles needed
+//import models needed
+const router = require('express').Router();
+const { User } = require('../../models');
 
+router.post('/signup', async (req, res) => {
+  try {
+    const userData = await User.create(req.body);
 
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
 
-//route to create user
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
-//route to login a user
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
-//route to logout a user
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, try again' });
+      return;
+    }
 
-//route to de;lete account
+    // verify the password 
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, try again' });
+      return;
+    }
+
+    // create session var based on the logged in user
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'Welcome to Vesuvios online service!' });
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    // remove the session var
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 module.exports = router;
