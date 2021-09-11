@@ -1,3 +1,3 @@
-const User = require('./reservation');
+const reservation = require('./reservation');
 
 module.exports = { reservation };
