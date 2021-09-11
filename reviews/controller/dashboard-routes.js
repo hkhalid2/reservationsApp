@@ -12,4 +12,4 @@ const router = require('express').Router();
 // get route to edit a specific post
 
 
-module.exports =router;
+module.exports = router;
