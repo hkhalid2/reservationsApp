@@ -1,7 +1,7 @@
 const router = require('express').Router();
 //import models
-const user = require('/reviews/models/user.js')
-const reviews = require('/reviews/models/reviews.js')
+const { User } = require('/reviews/models')
+const { Reviews } = require('/reviews/models')
 //import authentication fucntion
 const withAuth = require('/reviews/utils/auth.js')
 
