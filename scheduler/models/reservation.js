@@ -21,11 +21,12 @@ reservation.init(
             allowNull: false
         },
 
-        // unsure on how to write this property
-        // date_time: { 
-        //     type: DataTypes.da
-
-        // }
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+        },
     },
     {
         sequelize,
