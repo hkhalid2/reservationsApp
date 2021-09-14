@@ -20,8 +20,8 @@ reservation.init(
             type: DataTypes.DATE,
             allowNull: false
         },
-        email_add: {
-            type: DataTypes.STRING,
+        phone_num: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         user_id: {
@@ -31,6 +31,7 @@ reservation.init(
               key: 'id',
         },
     },
+ },
     {
         sequelize,
         timestamps: false,
