@@ -1,0 +1,17 @@
+[
+    {
+      "guest_name": "Tony Soprano",
+      "reservation_date": "2021-10-31",
+      "phone_num": 123456789
+    },
+    {
+      "guest_name": "Mob Dude",
+      "reservation_date": "2024-12-25",
+      "phone_num": 123456789
+    },
+    {
+      "guest_name": "Evil guy",
+      "reservation_date":  "2020-03-25",
+      "phone_num": 123456789
+    }
+  ]
