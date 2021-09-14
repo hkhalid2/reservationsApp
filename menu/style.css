@@ -1,4 +1,8 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap" rel="stylesheet">
+
+
+* {
+    background-color: #9A4E30;
+    font-family: 'Didot', serif;
+    color: #DEA17C
+}
 
