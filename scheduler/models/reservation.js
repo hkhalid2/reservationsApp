@@ -16,17 +16,26 @@ reservation.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        email_add: {
-            type: DataTypes.STRING,
+        reservation_date: {
+            type: DataTypes.DATE,
             allowNull: false
         },
-
-        // unsure on how to write this property
-        // date_time: { 
-        //     type: DataTypes.da
-
-        // }
+        phone_num: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        party_num: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+        },
     },
+ },
     {
         sequelize,
         timestamps: false,
