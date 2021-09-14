@@ -16,11 +16,14 @@ reservation.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        reservation_date: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
         email_add: {
             type: DataTypes.STRING,
             allowNull: false
         },
-
         user_id: {
             type: DataTypes.INTEGER,
             references: {
