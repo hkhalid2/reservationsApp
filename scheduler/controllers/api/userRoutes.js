@@ -1,9 +1,7 @@
 const router = require('express').Router();
-//import models needed
-const router = require('express').Router();
-const { User } = require('../../models');
+const { user } = require('../../models');
 
-router.post('/signup', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
@@ -25,26 +23,24 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, try again' });
+        .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
-    // verify the password 
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, try again' });
+        .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
-    // create session var based on the logged in user
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       
-      res.json({ user: userData, message: 'Welcome to Vesuvios online service!' });
+      res.json({ user: userData, message: 'You are now logged in!' });
     });
 
   } catch (err) {
@@ -54,7 +50,6 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
-    // remove the session var
     req.session.destroy(() => {
       res.status(204).end();
     });
