@@ -1,0 +1,23 @@
+{
+  "name": "reservationsApp",
+  "version": "1.0.0",
+  "description": "added",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkhalid2/reservationsApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkhalid2/reservationsApp/issues"
+  },
+  "homepage": "https://github.com/hkhalid2/reservationsApp#readme",
+  "dependencies": {
+    "mysql2": "^2.3.0"
+  }
+}

@@ -22,6 +22,6 @@ router.get(':/reviews', async (req, res) => {
 
 //get route to login (render login handlebars file)
 
-//get route to sign up)render signup hbs)
+//get route to sign up (render signup hbs)
 
 module.exports= router;
