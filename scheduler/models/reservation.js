@@ -24,6 +24,10 @@ reservation.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        party_num: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
