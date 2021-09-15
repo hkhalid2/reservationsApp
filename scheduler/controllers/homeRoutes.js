@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     const resData = await reservation.findAll({
       include: [
         {
-          model: User,
+          model: user,
           attributes: ['name'],
         },
       ],
@@ -32,7 +32,7 @@ router.get('/reservation/:id', async (req, res) => {
     const resData = await reservation.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: user,
           attributes: ['name'], 
         },
       ],
@@ -53,15 +53,15 @@ router.get('/reservation/:id', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await user.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: reservation }],
     });
 
-    const user = userData.get({ plain: true });
+    const User = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      ...User,
       logged_in: true
     });
   } catch (err) {

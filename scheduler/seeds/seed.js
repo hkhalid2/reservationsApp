@@ -7,14 +7,14 @@ const resData = require('./resData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  const users = await user.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const reservation of resData) {
+  for (const res of resData) {
     await reservation.create({
-      ...reservation,
+      ...res,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
