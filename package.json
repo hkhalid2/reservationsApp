@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hkhalid2/reservationsApp#readme",
   "dependencies": {
+    "handlebars": "^4.7.7",
     "mysql2": "^2.3.0"
   }
 }

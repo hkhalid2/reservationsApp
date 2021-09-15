@@ -13,7 +13,7 @@ router.post('/reviews', withAuth, async (req, res) => {
         res.status(200).json(newReview);
       }
     catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(400).json(err);
     }
 })
