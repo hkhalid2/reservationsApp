@@ -58,10 +58,10 @@ router.get('/profile', withAuth, async (req, res) => {
       include: [{ model: reservation }],
     });
 
-    const user = userData.get({ plain: true });
+    const User = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      ...User,
       logged_in: true
     });
   } catch (err) {

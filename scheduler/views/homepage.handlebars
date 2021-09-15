@@ -1,25 +1,17 @@
 <!-- Loop over each object in the projects array -->
 {{#each reservations as |reservation| }}
-<div class="row mb-4 project">
+<div class="row mb-4 reservation">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{reservation.id}}">{{reservations.guest_name}}</a>
+      <a href="/reservation/{{reservation.id}}">{{reservations.guest_name}}</a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount"></span>
-      needed!
-    </p>
-    <p>Created by {{reservations.user.name}} on {{format_date reservation.date_created}}</p>
+    <p>Created by {{reservation.guest_name}} on {{format_date reservation.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-    Date Reserved: {{reservation.reservation_date}}
-    For party of: {{reservation.party_num}}
-    Contact at : {{reservation.phone_num}}
+    Date Reserved: {{reservation.reservation_date}} <br>
+    For party of: {{reservation.party_num}} <br>
+    Contact at : {{reservation.phone_num}} <br>
     </p>
   </div>
 </div>
