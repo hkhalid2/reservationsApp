@@ -10,7 +10,7 @@ const newFormHandler = async (event) => {
     if (guest_name && reservation_date && phone_num && party_num) {
       const response = await fetch(`/api/reservations`, {
         method: 'POST',
-        body: JSON.stringify({ guest_name, reservation_date, phone_num, party_num}),
+        body: JSON.stringify({ guest_name, reservation_date, phone_num, party_num }),
         headers: {
           'Content-Type': 'application/json',
         },
