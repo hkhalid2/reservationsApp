@@ -2,7 +2,7 @@
     background-color: #9A4E30;
     font-family: 'Brygada 1918', serif;
     text-align: center;
-    color: #DEA17C
+    color: #DEA17C !important;
 }
 
 #img {
@@ -11,26 +11,12 @@
     height: auto;
   }
 
-  nav ul {
-    background-color:#c4a99e !important;
-    overflow:hidden;
-    color:white;
-    padding: 25px; 
-    margin:0;
-    text-align:center;
-    -webkit-transition:max-height 0.4s;
-    -ms-transition:max-height 0.4s;
-    -moz-transition:max-height 0.4s;
-    -o-transition:max-height 0.4s;
-    transition:max-height 0.4s;
+ #nav {
+     padding: 20px;
+     color: #DEA17C
+     
+ } 
+ 
+nav.navlink:hover {
+  color: white !important;
   }
-  
-  nav ul li {
-    display:inline-block;
-    padding:20px;
-  }
-  
-  nav ul li:hover {
-    color: white;
-  }
-  
