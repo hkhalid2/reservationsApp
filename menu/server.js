@@ -5,7 +5,6 @@ const path = require('path');
 
 const app = express()
 
-// setting up handlebars for use
 const hbs = handlebars.create({})
 
 app.engine("handlebars", hbs.engine);
@@ -19,6 +18,10 @@ app.get("/menu", (req, res) => {
 
 app.get("/reservations", (req, res) => {
     res.render('reservation')
+ })
+
+ app.get("/reviews", (req, res) => {
+    res.render('reviews')
  })
 
 app.listen(3001, () => {
