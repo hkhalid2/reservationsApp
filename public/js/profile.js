@@ -18,6 +18,7 @@ const newFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/profile');
+        alert('Reservation created! Look forward to seeing you');
       } else {
         alert('Failed to create reservation');
       }
