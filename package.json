@@ -17,12 +17,12 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "express-session": "^1.17.2",
+    "moment": "^2.29.1",
+    "moment-countdown": "0.0.3",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   },
-  
   "devDependencies": {},
-
   "keywords": [],
   "author": "",
   "license": "ISC"
