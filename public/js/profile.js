@@ -17,7 +17,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/reservations');
         alert('Reservation created! Look forward to seeing you');
       } else {
         alert('Failed to create reservation');
@@ -34,7 +34,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/reservations');
       } else {
         alert('Failed to delete reservation');
       }
