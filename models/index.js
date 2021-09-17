@@ -1,5 +1,6 @@
 const reservation = require('./reservation');
 const user = require('./user');
+const Review = require('./Review');
 
 
 user.hasMany(reservation, {
@@ -11,4 +12,4 @@ reservation.belongsTo(user, {
   foreignKey: 'user_id'
 });
 
-module.exports = { reservation, user };
+module.exports = { reservation, user, Review };
