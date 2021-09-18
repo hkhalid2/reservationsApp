@@ -1,0 +1,22 @@
+* {
+    /* background-color: #9A4E30; */
+    font-family: 'Brygada 1918', serif;
+    text-align: center;
+    /* color: #DEA17C !important; */
+}
+
+#img {
+    display: block;
+    max-width: 75%;
+    height: auto;
+  }
+
+ #nav {
+     padding: 20px;
+     /* color: #DEA17C */
+     
+ } 
+ 
+nav.navlink:hover {
+  color: white !important;
+  }
