@@ -5,7 +5,7 @@ The motivation behind the creation of this app is to have one app that includes 
 
 
 ## Installation
-The npms included in this project are bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, moment, moment-countdown, mysql2, and sequelize. 
+The npms included in this project are connect-session-sequelize, dotenv, express, express-handlebars, express-session, moment, moment-countdown, mysql2, and sequelize. 
 
 They can be insalled using the command: 
 
@@ -16,9 +16,12 @@ They can be insalled using the command:
 As a USER 
 GIVEN that I want to eat at this specific restaurant
 WHEN I view the website
-THEN I am presented with the menu and options to book a reservation or read a review
-THEN I am presented with a form on the reservations page to enter my parties information, my contact information and date/time	
-THEN once a log in is set, I am able to leave a review
+THEN I am presented with a homepage which includes the menu and an option to login 
+WHEN I login/create a login
+THEN I am presented with the option to leave a Review, Reservation or view all Reservations or Reviews
+WHEN I leave a new reservation/review
+THEN said reservation/review is added to the list of reservations/reviews
+
 
 ## Future Dev
 -Launch Reviews page with full capability 
@@ -27,12 +30,13 @@ THEN once a log in is set, I am able to leave a review
 -Use an API with various menu items and have a new one be displayed on the menu daily 
 -Style and rearrange overall layout
 
-
+## Link to deployed application
+https://salty-brushlands-40310.herokuapp.com
 
 ## License 
 MIT License
 
-            Copyright (c) 2021 Hamza Khalid
+            Copyright (c) 2021 Hamza Khalid, Shelby Butt, Kelly Gumm
             
             Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
             
