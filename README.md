@@ -33,6 +33,10 @@ THEN said reservation/review is added to the list of reservations/reviews
 ## Link to deployed application
 https://salty-brushlands-40310.herokuapp.com
 
+## Screenshots
+![](screenshot1.png)
+![](screenshot2.png)
+
 ## License 
 MIT License
 
