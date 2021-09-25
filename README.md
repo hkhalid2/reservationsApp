@@ -30,8 +30,26 @@ THEN said reservation/review is added to the list of reservations/reviews
 -Use an API with various menu items and have a new one be displayed on the menu daily 
 -Style and rearrange overall layout
 
+## Technologies Used
+* HTML5 
+* CSS3
+* Bootstrap
+* Javascript
+* Node
+* Express
+* Handlebars
+* MySQL
+* Sequelize ORM
+* Heroku
+
+
 ## Link to deployed application
 https://salty-brushlands-40310.herokuapp.com
+
+## Contributors
+* Shelby Butt (shelbylb97)
+* Kelly Gumm (kelly-gumm)
+* Hamza Khalid (hkhalid2)
 
 ## Screenshots
 ![](screenshot1.png)
